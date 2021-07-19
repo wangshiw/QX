@@ -1,3 +1,3 @@
 感谢各位大佬  
-DivineEngine👉BlockiOSUpdate  
-Tartarus2014👉Emby  
+BlockiOSUpdate👉https://github.com/DivineEngine
+Emby👉https://github.com/Tartarus2014/For-own-use.git
