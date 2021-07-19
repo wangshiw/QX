@@ -1,2 +1,1 @@
-来自barrym-chen/Q-Search-All  
-https://github.com/barrym-chen/Q-Search-All.git
+q-search.sgmodule来自barrym-chen  https://github.com/barrym-chen/Q-Search-All.git
