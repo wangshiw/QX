@@ -13,6 +13,10 @@ nf_check = script-name=nf_check, title="Netflix 解锁检测", content="请刷�
 disney_check = script-name=disney_check, title=Disney+ 解锁检测, content=请刷新, update-interval=36000
 #YouTube
 ytb_check = script-name=ytb_check, title="YouTube Premium 解锁检测", update-interval=36000
+flushDNS = script-name=flushDNS,update-interval=-1
+疫情统计 = script-name=疫情统计, title=新冠疫情查询, content=请刷新, update-interval=600
+
+
 [Script]
 # 网络状态
 net-info-panel.js=script-path=https://raw.githubusercontent.com/Nebulosa-Cat/Surge/main/Panel/Network-Info/cn/networkCheck_CN.js,type=generic
@@ -31,5 +35,17 @@ nf_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com
 ytb_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js
 #Disney+检测
 disney_check = type=generic,timeout=5,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js
+
+疫情播报 = type=cron,cronexp=0 8-22/3 * * *,wake-system=1,timeout=60,script-path= https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js
+
+疫情统计 = type=generic, script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Covid19.js
+
+配置重载 = script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/Profile-Reload.js,type=generic
+
+Web豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Surge/main/JavaScript/DouBan.js
+
+
+
+
 [Host]
 ip-api.com = 208.95.112.1
